@@ -1,0 +1,124 @@
+@import "../../styles.scss";
+.contain {
+    max-width: 100%;
+    height: 88vh;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;
+    .first-block {
+        color: white;
+        width: 100%;
+        height: 88vh;
+        background-color: $dark-contain-color;
+        display: flex;
+        .started {
+            display: grid;
+            gap: 30px;
+            margin-left: 6vw;
+            width: 80vw;
+            div:first-child {
+                width: 80%;
+                font-size: 60px;
+                font-weight: 780;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                span {
+                    color: $text-primary;
+                }
+                * {
+                    line-height: 1em;
+                }
+            }
+            div:nth-child(2) {
+                font-size: 19px;
+                line-height: 1.2em;
+            }
+            div:nth-child(3) {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: center;
+                button {
+                    background-color: $primary-color;
+                    color: white;
+                    width: 90%;
+                    padding: 1vw;
+                    font-size: large;
+                    z-index: 1;
+                }
+                div>p {
+                    font-size: 14px;
+                    cursor: pointer;
+                    text-align: center;
+                    margin-right: 10%;
+                }
+            }
+        }
+        .started,
+        .picture-started {
+            width: 100%;
+            justify-self: center;
+            align-self: center;
+        }
+        .picture-started {
+            background-image: url("../../assets/gif/hero.gif");
+            height: 90%;
+            width: 90%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contain{
+        .first-block {
+            height: 120vh;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .started {
+        gap: 5px !important;
+        margin: 5vh 3vw 5vh 3vw !important;
+        div:first-child * {
+            gap: 10px;
+            font-size: 30px;
+            width: 90vw !important;
+            display: grid !important;
+            justify-items: center !important;
+            span {
+                color: $text-primary;
+            }
+            * {
+                line-height: 0.5em;
+            }
+        }
+        div:nth-child(2) * {
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.2em;
+        }
+        div:nth-child(3) {
+            button {
+                width: 90% !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            div>p{
+                margin-right: 0% !important;
+            }
+        }
+    }
+    .started,
+    .picture-started {
+        justify-self: center !important;
+        align-self: center !important;
+    }
+    .picture-started {
+        height: 60% !important;
+    }
+}
